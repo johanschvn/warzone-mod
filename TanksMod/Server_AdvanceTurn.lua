@@ -46,15 +46,13 @@ function Server_AdvanceTurn_Order(game, order, result, skipThisOrder, addNewOrde
 		builder.AttackPower = tankPower;
 		builder.DefensePower = tankPower;
 		builder.CombatOrder = 3415; --defends commanders
-		builder.DamageToKill = tankPower;
-		builder.DamageAbsorbedWhenAttacked = tankPower;
 		builder.CanBeGiftedWithGiftCard = true;
 		builder.CanBeTransferredToTeammate = true;
 		builder.CanBeAirliftedToSelf = true;
 		builder.CanBeAirliftedToTeammate = true;
 		builder.IsVisibleToAllPlayers = false;
-		builder.TextOverHeadOpt = 'This is a tank';
-	
+		builder.Health = tankPower;
+
 		local terrMod = WL.TerritoryModification.Create(targetTerritoryID);
 		terrMod.AddSpecialUnits = {builder.Build()};
 		

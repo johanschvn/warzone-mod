@@ -25,7 +25,6 @@ function Client_PresentConfigureUI(rootParent)
 		.SetSliderMaxValue(40)
 		.SetValue(cost);
 
-
 	local row2 = UI.CreateHorizontalLayoutGroup(vert);
 	UI.CreateLabel(row2).SetText('How powerful the tank is (in armies)');
 	powerInputField = UI.CreateNumberInputField(row2)
