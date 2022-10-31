@@ -52,6 +52,8 @@ function Server_AdvanceTurn_Order(game, order, result, skipThisOrder, addNewOrde
 		builder.CanBeAirliftedToTeammate = true;
 		builder.IsVisibleToAllPlayers = true;
 		builder.Health = tankPower;
+		builder.DamageToKill = tankPower;
+		builder.DamageAbsorbedWhenAttacked = tankPower;
 
 		local terrMod = WL.TerritoryModification.Create(targetTerritoryID);
 		terrMod.AddSpecialUnits = {builder.Build()};
