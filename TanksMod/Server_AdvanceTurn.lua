@@ -50,7 +50,7 @@ function Server_AdvanceTurn_Order(game, order, result, skipThisOrder, addNewOrde
 		builder.CanBeTransferredToTeammate = true;
 		builder.CanBeAirliftedToSelf = true;
 		builder.CanBeAirliftedToTeammate = true;
-		builder.IsVisibleToAllPlayers = false;
+		builder.IsVisibleToAllPlayers = true;
 		builder.Health = tankPower;
 
 		local terrMod = WL.TerritoryModification.Create(targetTerritoryID);
