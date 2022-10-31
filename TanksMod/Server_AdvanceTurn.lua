@@ -53,6 +53,7 @@ function Server_AdvanceTurn_Order(game, order, result, skipThisOrder, addNewOrde
 		builder.CanBeAirliftedToSelf = true;
 		builder.CanBeAirliftedToTeammate = true;
 		builder.IsVisibleToAllPlayers = false;
+		builder.TextOverHeadOpt = 'This is a tank';
 	
 		local terrMod = WL.TerritoryModification.Create(targetTerritoryID);
 		terrMod.AddSpecialUnits = {builder.Build()};
