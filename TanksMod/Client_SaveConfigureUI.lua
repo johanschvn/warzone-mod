@@ -9,6 +9,6 @@ function Client_SaveConfigureUI(alert)
     Mod.Settings.TankPower = power;
 
     local maxTanks = maxTanksField.GetValue();
-    if maxTanks < 1 or maxTanks > 5 then alert("Max tanks must be between 1 and 5"); end
-    Mod.Settings.MaxTanks = maxTanks;
+    if maxTanks < 3 or maxTanks > 5 then alert("Max tanks must be between 3 and 5"); end
+    Mod.Settings.MaxTanks = 3;
 end

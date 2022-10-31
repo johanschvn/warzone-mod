@@ -14,7 +14,7 @@ function Client_PresentConfigureUI(rootParent)
 	if cost == nil then cost = 20; end
 
 	local maxTanks = Mod.Settings.MaxTanks;
-	if maxTanks == nil then maxTanks = 2; end;
+	if maxTanks == nil or maxTanks < 3 or maxTanks>5 then maxTanks = 3; end;
     
 	local vert = UI.CreateVerticalLayoutGroup(rootParent);
 
