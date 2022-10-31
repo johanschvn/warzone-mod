@@ -51,7 +51,6 @@ function Server_AdvanceTurn_Order(game, order, result, skipThisOrder, addNewOrde
 		builder.CanBeAirliftedToSelf = true;
 		builder.CanBeAirliftedToTeammate = true;
 		builder.IsVisibleToAllPlayers = true;
-		builder.Health = tankPower;
 		builder.DamageToKill = tankPower;
 		builder.DamageAbsorbedWhenAttacked = tankPower;
 
