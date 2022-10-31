@@ -36,7 +36,7 @@ function Client_PresentConfigureUI(rootParent)
 	local row3 = UI.CreateHorizontalLayoutGroup(vert);
 	UI.CreateLabel(row3).SetText('How many tanks each player can have at a time');
 	maxTanksField = UI.CreateNumberInputField(row3)
-		.SetSliderMinValue(1)
+		.SetSliderMinValue(3)
 		.SetSliderMaxValue(5)
 		.SetValue(maxTanks);
 	
