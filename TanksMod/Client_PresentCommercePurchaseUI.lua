@@ -8,7 +8,8 @@ function Client_PresentCommercePurchaseUI(rootParent, game, close)
 
 	UI.CreateLabel(vert).SetText("Tanks are worth " .. Mod.Settings.TankPower .. " armies and cost " .. Mod.Settings.CostToBuyTank .. " gold to purchase.  You may only have " .. Mod.Settings.MaxTanks .. " tanks at a time.");
 	UI.CreateButton(vert).SetText("Purchase a tank for " .. Mod.Settings.CostToBuyTank .. " gold").SetOnClick(PurchaseClicked);
-end
+	UI.CreateLabel(vert).SetText("Airplanes are worth " .. Mod.Settings.TankPower .. " armies and cost " .. Mod.Settings.CostToBuyTank .. " gold to purchase.  You may only have " .. Mod.Settings.MaxTanks .. " tanks at a time.");
+	UI.CreateButton(vert).SetText("Purchase an airplane for " .. Mod.Settings.CostToBuyTank .. " gold").SetOnClick(PurchaseClicked);end
 
 function NumTanksIn(armies)
 	local ret = 0;
