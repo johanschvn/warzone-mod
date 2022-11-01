@@ -56,6 +56,10 @@ function Server_AdvanceTurn_Order(game, order, result, skipThisOrder, addNewOrde
 
 		local terrMod = WL.TerritoryModification.Create(targetTerritoryID);
 		terrMod.AddSpecialUnits = {builder.Build()};
+
+		local str = {};
+		str[WL.StructureType.Attack] = 1;
+		terrMod.SetSTructuresOpt = str;
 		
 		addNewOrder(WL.GameOrderEvent.Create(order.PlayerID, 'Purchased a tank', {}, {terrMod}));
 	end
