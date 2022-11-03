@@ -65,17 +65,17 @@ function PresentBuyTankDialog(rootParent, setMaxSize, setScrollable, game, close
 	SelectTerritoryClicked(); --just start us immediately in selection mode, no reason to require them to click the button
 end
 
-function BuyWhat() {
+function BuyWhat() 
 	UI.PromptFromList("What to buy", {{text="Tank",selected=BuyingTank},{text="Plane",selected=BuyingPlane});
-}
+end
 
-function BuyingTank() {
+function BuyingTank() 
 	Buying = "Tank";
-}
+end
 
-function BuyingPlane() {
+function BuyingPlane() 
 	Buing = "Plane";
-}
+end
 
 function SelectTerritoryClicked()
 	UI.InterceptNextTerritoryClick(TerritoryClicked);
