@@ -52,6 +52,7 @@ end
 
 function PresentBuyTankDialog(rootParent, setMaxSize, setScrollable, game, close)
 	Close2 = close;
+	Buing="Tank";
 
 	local vert = UI.CreateVerticalLayoutGroup(rootParent).SetFlexibleWidth(1); --set flexible width so things don't jump around while we change InstructionLabel
 
@@ -59,9 +60,22 @@ function PresentBuyTankDialog(rootParent, setMaxSize, setScrollable, game, close
 	TargetTerritoryInstructionLabel = UI.CreateLabel(vert).SetText("");
 
 	BuyTankBtn = UI.CreateButton(vert).SetInteractable(false).SetText("Complete Purchase").SetOnClick(CompletePurchaseClicked);
+	SelectBtn = UI.CreateButton(vert).SetInteractable(true).SetText("Buying " .. Buying).SetOnClick(BuyWhat);
 
 	SelectTerritoryClicked(); --just start us immediately in selection mode, no reason to require them to click the button
 end
+
+function BuyWhat() {
+	UI.PromptFromList("What to buy", {{"Tank",BuyingTank},{"Plane",BuyingPlane});
+}
+
+function BuyingTank() {
+	Buying = "Tank";
+}
+
+function BuyingPlane() {
+	Buing = "Plane";
+}
 
 function SelectTerritoryClicked()
 	UI.InterceptNextTerritoryClick(TerritoryClicked);
