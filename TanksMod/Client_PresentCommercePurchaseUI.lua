@@ -71,10 +71,12 @@ end
 
 function BuyingTank() 
 	Buying = "Tank";
+	SelectBtn.SetText("Buying " .. Buying);
 end
 
 function BuyingPlane() 
 	Buying = "Plane";
+	SelectBtn.SetText("Buying " .. Buying);
 end
 
 function SelectTerritoryClicked()
