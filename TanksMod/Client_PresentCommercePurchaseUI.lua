@@ -45,15 +45,15 @@ function PurchaseClicked()
 		return;
 	end
 
-	Game.CreateDialog(PresentBuyTankDialog); 
+	Buying = "Tank";
+    Game.CreateDialog(PresentBuyTankDialog); 
 	Close1();
 end
 
 
 function PresentBuyTankDialog(rootParent, setMaxSize, setScrollable, game, close)
 	Close2 = close;
-	Buying="Tank";
-
+	
 	local vert = UI.CreateVerticalLayoutGroup(rootParent).SetFlexibleWidth(1); --set flexible width so things don't jump around while we change InstructionLabel
 
 	SelectTerritoryBtn = UI.CreateButton(vert).SetText("Select Territory").SetOnClick(SelectTerritoryClicked);
