@@ -66,7 +66,7 @@ function PresentBuyTankDialog(rootParent, setMaxSize, setScrollable, game, close
 end
 
 function BuyWhat() {
-	UI.PromptFromList("What to buy", {{"Tank",BuyingTank},{"Plane",BuyingPlane});
+	UI.PromptFromList("What to buy", {{text="Tank",selected=BuyingTank},{text="Plane",selected=BuyingPlane});
 }
 
 function BuyingTank() {
