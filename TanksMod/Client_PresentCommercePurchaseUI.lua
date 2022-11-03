@@ -52,7 +52,7 @@ end
 
 function PresentBuyTankDialog(rootParent, setMaxSize, setScrollable, game, close)
 	Close2 = close;
-	Buing="Tank";
+	Buying="Tank";
 
 	local vert = UI.CreateVerticalLayoutGroup(rootParent).SetFlexibleWidth(1); --set flexible width so things don't jump around while we change InstructionLabel
 
