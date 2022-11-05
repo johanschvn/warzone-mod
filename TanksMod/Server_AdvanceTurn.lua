@@ -40,9 +40,9 @@ function Server_AdvanceTurn_Order(game, order, result, skipThisOrder, addNewOrde
 		local tankPower = Mod.Settings.TankPower;
 
 		local builder = WL.CustomSpecialUnitBuilder.Create(order.PlayerID);
-		builder.Name = 'Tank';
+		builder.Name = 'APC';
 		builder.IncludeABeforeName = true;
-		builder.ImageFilename = 'bomber.png';
+		builder.ImageFilename = 'apc.png';
 		builder.AttackPower = tankPower;
 		builder.DefensePower = tankPower;
 		builder.CombatOrder = 3415; --defends commanders
